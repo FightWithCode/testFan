@@ -1,3 +1,68 @@
+/***** Tester  *****/
+.outer {
+  display: table;
+  position: relativ;
+  height: 100%;
+  width: 100%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  width: 768px;
+}
+
+.matchInfo{
+  z-index: 2;
+  position: relative;
+}
+
+.venue{
+  position:absolute;
+  top:10px;
+  left:70px;
+  z-index: 10;
+}
+
+.matchInfoContainer{
+  z-index: 1;
+}
+
+.matchNo{
+  position:absolute;
+  top:45px;
+  left:70px;
+  z-index: 10; 
+}
+
+.playerCounter{
+  position:absolute;
+  top:10px;
+  left:455px;
+  z-index: 10; 
+}
+#signup
+{
+  background-color: #ff4f8b  !important;
+  border-color: #ff4f8b  !important;
+  border-radius: 10px;
+  font-size: 15px;
+  color:#fff;
+  text-align: center;
+}
+
+.playNowButton{
+  position:absolute;
+  top:45px;
+  left:455px;
+  z-index: 10; 
+  color:red;
+}
 /***** For All *****/
 @media screen and (max-width:480px){
   h1 { font-size: 6.5vw; }
@@ -13,8 +78,16 @@ body
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   margin-top: 50px;
+  background: url("../../images/backone.jpg")
 }
 
+.right{
+  float:right;
+}
+
+.left{
+  float: left;
+}
 
 
 /***** Footer *****/
@@ -120,3 +193,55 @@ body
       text-align: center;
   }
 }
+
+/***** Random stuff I*****/
+body
+{
+  background-image: url(images/back.jpg);
+  background-attachment: fixed ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.blackColor
+{
+  color:white;
+  font-size: 18px;
+}
+#FanCricket
+{
+  color:#d2d1d1;
+  font-size: 18px;
+}
+#FanCricket:hover
+{
+  color:white;
+}
+#myNav
+{
+  border-width: 0px;
+  color:white;
+}
+.blackColor:hover
+{
+  color:#white;
+}
+#matchDetails
+{
+  color:rgb(54, 196, 4);
+}
+#matchDetails:hover
+{
+  background-color:rgb(245, 245, 245);
+  transition: 0.5s;
+}
+#matchDetails h4
+{
+  color:#222;
+}
+#matchTimeText
+{
+  color:green;
+}
+
+
