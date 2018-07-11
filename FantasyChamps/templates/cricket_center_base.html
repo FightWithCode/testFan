@@ -5,6 +5,7 @@
   <head>
     <title>{% block title %}FantasyChamps{% endblock title %}</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     {% block stylesheets %}
       <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
       <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -14,106 +15,87 @@
     {% endblock stylesheets %}
 </head>
   <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">
-            <img alt="Brand" src="{% static "images/Newlogo.png" %}" style="position:relative;width:55px; height:50px;top:-15px;">
-          </a>
-          {% if request|is_mobile %}
-            <a class="navbar-brand" href="#">FC</a>
-          {% else %}  
-            <a class="navbar-brand" href="#">FantasyChamps</a>
-          {% endif %}
+    <div>
+      <div class="nav">
+        <div class="nav-header">
+          <div class="nav-title">
+            FantasyChamps          
+          </div>
         </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Refer and Earn</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            {% if request|is_mobile %}
-              <a href="#">Notofications</a>
-            {% else %}
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="fa fa-bell fa-lg"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">You are a Winner</a></li>
-                  <li><a href="#">10 Dipodited in Account</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">View all Notifications</a></li>
-                </ul>
-              </li>
-            {% endif %}
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Account <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Finace</a></li>
-                <li><a href="#">Something</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="{% url 'UserLogoutView' %}">Logout</a></li>
-              </ul>
-            </li>
-          </ul>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        <input type="checkbox" id="nav-check">
+        <div class="nav-links">
+          <a href="#">Profile</a></li>
+          <a href="#">Finace</a></li>
+          <a href="#">Something</a></li>
+          <li role="separator" class="divider"></li>
+          <a href="{% url 'UserLogoutView' %}">Logout</a>
         </div>
       </div>
-    </nav>
+    <!--<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+              <img alt="Brand" src="{% static "images/Newlogo.png" %}" style="position:relative;width:55px; height:50px;top:-15px;">
+            </a>
+            {% if request|is_mobile %}
+              <a class="navbar-brand" href="#">FC</a>
+            {% else %}  
+              <a class="navbar-brand" href="#">FantasyChamps</a>
+            {% endif %}
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Refer and Earn</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              {% if request|is_mobile %}
+                <a href="#">Notofications</a>
+              {% else %}
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="fa fa-bell fa-lg"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">You are a Winner</a></li>
+                    <li><a href="#">10 Dipodited in Account</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">View all Notifications</a></li>
+                  </ul>
+                </li>
+              {% endif %}
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Account <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Profile</a></li>
+                  <li><a href="#">Finace</a></li>
+                  <li><a href="#">Something</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="{% url 'UserLogoutView' %}">Logout</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>-->
 
     {% block other_page_content %}
 
     {% endblock%}
 
-    <footer id="myFooter">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3"  class="img-responsive">
-                    <img src="{% static "images/footerlogo.png" %}" alt="">
-                </div>
-                <div class="col-sm-2">
-                    <h5>Get started</h5>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Sign up</a></li>
-                        <li><a href="#">Downloads</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-2">
-                    <h5>About us</h5>
-                    <ul>
-                        <li><a href="#">Company Information</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Reviews</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-2">
-                    <h5>Support</h5>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Help desk</a></li>
-                        <li><a href="#">Forums</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <div class="social-networks">
-                        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                        <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <p>Copyright © 2018 FantasyChamps Pvt. Ltd.</p>
-        </div>
-    </footer>
     {% block scripts %}
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>

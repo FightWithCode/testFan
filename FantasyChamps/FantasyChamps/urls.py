@@ -22,5 +22,5 @@ urlpatterns = [
     url(r'^$', views.IndexView, name="IndexView"),
     url(r'^admin/', admin.site.urls),
     url(r'^cricket_center/', include('cricket_center.urls')),
-    url(r'^logout/', views.UserLogoutView, name="UserLogoutView"),   
+    url(r'^logout/', views.UserLogoutView, name="UserLogoutView"),
 ]
