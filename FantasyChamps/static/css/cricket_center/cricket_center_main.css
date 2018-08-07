@@ -1,6 +1,6 @@
 /*****Match Area*****/
 .MatchArea{
-  width: 550px;
+  width: 580px;
   position: relative;
   height: 100vh;
   height: -moz-calc(100vh - 50px);
@@ -31,89 +31,7 @@
   position: absolute;
 }
 
-/***** Tester  *****/
-/*.outer {
-  display: table;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
-
-.middle {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.inner {
-  margin-left: auto;
-  margin-right: auto;
-  width: 768px;
-}
-
-.matchInfo{
-  z-index: 2;
-  position: relative;
-}
-
-.venue{
-  position:absolute;
-  top:10px;
-  left:70px;
-  z-index: 10;
-}
-
-.matchInfoContainer{
-  z-index: 1;
-}
-
-.matchNo{
-  position:absolute;
-  top:45px;
-  left:70px;
-  z-index: 10; 
-}
-
-.playerCounter{
-  position:absolute;
-  top:10px;
-  left:455px;
-  z-index: 10; 
-}
-#signup
-{
-  background-color: #ff4f8b  !important;
-  border-color: #ff4f8b  !important;
-  border-radius: 10px;
-  font-size: 15px;
-  color:#fff;
-  text-align: center;
-}
-
-.playNowButton{
-  position:absolute;
-  top:45px;
-  left:455px;
-  z-index: 10; 
-  color:red;
-}
-
-.navbar-fixed-top
-{
-  background-color: #06FF00;
-  color: #ff4f8b  !important;;
-}*/
-
-
-/***** For All *****/
-@media screen and (max-width:480px){
-  h1 { font-size: 6.5vw; }
-  h2 { font-size: 6vw; }
-  h3 { font-size: 5.5vw; }
-  h4 { font-size: 5vw; }
-  h5 { font-size: 4.5vw; }
-  h6 { font-size: 3.5vw; }
-}
-
+/*****Custyom Header SIze*****/
 body
 {
   font-family: 'Lato', sans-serif;
@@ -129,60 +47,13 @@ body
   float: left;
 }
 
-/***** Random stuff I*****/
-
-
-.blackColor
-{
-  color:white;
-  font-size: 18px;
-}
-#FanCricket
-{
-  color:#d2d1d1;
-  font-size: 18px;
-}
-#FanCricket:hover
-{
-  color:white;
-}
-#myNav
-{
-  border-width: 0px;
-  color:white;
-}
-.blackColor:hover
-{
-  color:#white;
-}
-#matchDetails
-{
-  color:rgb(54, 196, 4);
-}
-#matchDetails:hover
-{
-  background-color:rgb(245, 245, 245);
-  transition: 0.5s;
-}
-#matchDetails h4
-{
-  color:#222;
-}
-#matchTimeText
-{
-  color:green;
-}
-
 /*****Custom Header*****/
 * {
   box-sizing: border-box;
 }
-
-
-
 .nav {
   height: 50px;
-  width: 550px;
+  width: 580px;
   background-color: #4d4d4d;
   position: relative;
   z-index: 1000;
@@ -275,11 +146,211 @@ body
     overflow-y: auto;
   }
 }
-@media (max-width: 550px) {
+
+/*****Match Area Content*****/
+.MatchInfoCard{
+  position: relative;
+  margin-top: 1.3vw;
+  top:-1%;
+  left: 2%;
+  width:96%;
+  height:100px;
+  background-color: #8AD3FF;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 7px;
+  -moz-box-shadow: 0 1px 7px;
+  box-shadow: 0 1px 7px;
+}
+
+.MatchInfo{
+  position: relative;
+  height:60%;
+  width:90%;
+  left:5%;
+}
+
+.ActionInfo{
+  position: relative;
+  height:40%;
+  top: -10%;
+  width:90%;
+  left: 5%;
+}
+
+.MatchHeader{
+  font-size: 16px;
+}
+
+.StartsIn{
+  background-color: #ff4f8b  !important;
+  border-color: #ff4f8b  !important;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 6px 12px;
+  color:#fff;
+  position: absolute;
+  top: 30%;
+  height: 35px;
+  right: 50%;
+  transform: translateX(-10%);
+}
+
+.SeparatorLine{
+  height: 100%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top:20%;
+  width:2px;
+  border: 1px solid black;
+}
+
+.PlayNow
+{
+  background-color: #ff4f8b  !important;
+  border-color: #ff4f8b  !important;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 6px 12px;
+  color:#fff;
+  position: absolute;
+  top: 30%;
+  height: 35px;
+  left: 50%;
+  transform: translateX(10%);
+}
+
+.TeamFirst{
+  width: 70px;
+  height: 95%;
+  position: relative;
+  top: 5%;
+  left: 0px;
+}
+
+.TeamSecond{
+  width: 70px;
+  height: 95%;
+  position: absolute;
+  right: -1px; 
+  top: 5%;
+}
+
+.vs{
+  opacity: 0.1;
+  font-size: 50px;
+  color: #6A6A6A;
+  text-align: center;
+  position: relative;
+  top: 0%%;
+  transform: translateY(-110%);
+}
+
+.MatchBetween{
+  width: 100%;
+}
+
+
+.MatchBetween h4{
+  position: absolute;
+  left: 50%;
+  top:5%;
+  transform: translateX(-50%);
+}
+
+.MatchBetween h6{
+  position: absolute;
+  left: 50%;
+  top:35%;
+  transform: translateX(-50%);
+}
+
+/*****On Smaller Devices*****/
+@media (max-width: 580px) {
   .nav{
     width: 100%;
   }
   .MatchArea{
     width:100%;
   }
+  .MatchBetween h4{
+    font-size: 15px; 
+  }
+  .MatchBetween h6{
+    font-size: 10px;
+  }
+  .MatchArea h3{
+    font-size: 20px;
+  }
+  .MatchInfoCard{
+    position: relative;
+    top:2px;
+  }
+  .LeagueCard h4{
+    font-size: 14px;
+  }
+}
 
+/*****Match League*****/
+.LeagueImage{
+  margin-left:10px; 
+  width:40px; 
+  border-radius:50%;
+}
+
+.LeagueArea{
+  width:100%;
+}
+
+.LeagueCard{
+  top:-1%;
+  height:200px;
+  background-color: #8AD3FF;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 7px;
+  -moz-box-shadow: 0 1px 7px;
+  box-shadow: 0 1px 7px;
+  margin-bottom: 15px;
+}
+
+.JoinNow
+{
+  position: relative;
+  background-color: #ff4f8b  !important;
+  border-color: #ff4f8b  !important;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 6px 12px;
+  color:#fff;
+  width: 100%;
+  top:-10px;
+}
+
+.LeagueName{
+  position: relative;
+  top:5px;;
+}
+
+.LeagueCard hr{
+  position: relative;
+  top:-5px;
+}
+
+.LeagueInfoContainer{
+  position: relative;
+  top:-15px;
+}
+
+.MatchCard{
+  top:10px;
+  margin-bottom: 20px;
+  position: relative;  
+  height:50px;
+  width:96%;
+  left:2%;
+  background-color: #8AD3FF;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 7px;
+  -moz-box-shadow: 0 1px 7px;
+  box-shadow: 0 1px 7px;
+}

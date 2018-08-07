@@ -26,7 +26,7 @@ SECRET_KEY = '$67zb#cc!&hch1e=&rqx_wz6tw9me8c7#e)*4@3ox9k&7%3v5n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["fightback.pythonanywhere.com", "127.0.0.1"]
 
 
 # Application definition
@@ -39,9 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_user_agents',
+    'widget_tweaks',
     'accounts',
     'cricket_center',
-    'widget_tweaks',
 ]
 
 AUTH_USER_MODEL = 'accounts.User'
@@ -55,7 +55,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django_user_agents.middleware.UserAgentMiddleware',
-
+    # 'FantasyChamps.CustomMiddlewares.StackOverflowMiddleware'
 ]
 
 ROOT_URLCONF = 'FantasyChamps.urls'
@@ -113,7 +113,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -129,3 +129,4 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     STATICFILES,
 ]
+

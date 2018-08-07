@@ -8,6 +8,10 @@ from django.contrib.auth.decorators import login_required
 #     template_name = "index.html"
 
 
+def handler404(request):
+    return HttpResponseRedirect(reverse('IndexView'))
+
+
 @login_required
 def UserLogoutView(request):
     logout(request)
@@ -16,7 +20,7 @@ def UserLogoutView(request):
 
 def IndexView(request):
     if request.user.is_authenticated():
-        return HttpResponseRedirect('cricket_center/cricket_center')
+        return HttpResponseRedirect('cricket_center')
     else:
         registered = False
         user_form = UserForm(request.POST or None)
@@ -43,7 +47,7 @@ def IndexView(request):
                             # request.user.profile.save()
                             # Send the user back to some page.
                             # In this case their homepage.
-                            return HttpResponseRedirect('cricket_center/cricket_center')
+                            return HttpResponseRedirect('cricket_center')
                         else:
                             # If account is not active:
                             return HttpResponse("Your account is not active.")
